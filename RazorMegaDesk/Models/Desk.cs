@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Configuration;
 
 namespace RazorMegaDesk.Models
@@ -53,15 +54,17 @@ namespace RazorMegaDesk.Models
         public DesktopMaterial Material { get; set; }
 
         [Required]
+        [Display(Name="Rush Days")]
         public RushOrder RushDays { get; set; }
 
         [Required]
         [StringLength(60, MinimumLength = 5)]
+        [Display(Name = "Customer Name")]
         public string CustomerName { get; set; } = string.Empty;
 
 
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), Display(Name = "Quote Date")]
         public DateTime QuoteDate { get; set; } = DateTime.Now;
 
 

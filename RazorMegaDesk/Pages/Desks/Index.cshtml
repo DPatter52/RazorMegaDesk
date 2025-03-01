@@ -5,11 +5,8 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Desk Manager</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <form class="filter-sort">
     <p>
         <label>Search Name: <input type="text" asp-for="SearchString" /></label>
@@ -24,7 +21,8 @@
     </p>
 </form>
 
-<table class="table">
+<div class="table-responsive">
+<table class="table deskmanager-table">
     <thead>
         <tr>
             <th>
@@ -51,7 +49,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Desk[0].Price)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -81,12 +78,26 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <div class="deskmanager-item-btns">
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.Id })'">
+                        Edit
+                    </button>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Details", new { id = item.Id })'">
+                        Details
+                    </button>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Delete", new { id = item.Id })'">
+                        Delete
+                    </button>
+                </div>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>
+<div class="deskmanager-options">
+    <button onclick="location.href+='/Create'">Create New</button>
+</div>
