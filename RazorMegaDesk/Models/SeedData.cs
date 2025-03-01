@@ -29,7 +29,7 @@ namespace RazorMegaDesk.Models
                         CustomerName = "Devin Patterson",
                         Drawers = 1,
                         Material = DesktopMaterial.Laminate,
-                        RushDays = 14,
+                        RushDays = RushOrder.Standard,
                         Price = 350.00M,
                         QuoteDate = DateTime.Parse("2018-6-1")
                     },
@@ -40,7 +40,7 @@ namespace RazorMegaDesk.Models
                           CustomerName = "Teagan Patterson",
                           Drawers = 0,
                           Material = DesktopMaterial.Veneer,
-                          RushDays = 3,
+                          RushDays = RushOrder.ThreeDay,
                           Price = 385.00M,
                           QuoteDate = DateTime.Parse("2012-4-8")
                       },
@@ -51,7 +51,7 @@ namespace RazorMegaDesk.Models
                           CustomerName = "Jordan Peterson",
                           Drawers = 7,
                           Material = DesktopMaterial.Rosewood,
-                          RushDays = 14,
+                          RushDays = RushOrder.Standard,
                           Price = 850.00M,
                           QuoteDate = DateTime.Parse("2012-10-30")
                       },
@@ -62,7 +62,7 @@ namespace RazorMegaDesk.Models
                           CustomerName = "Mike Tyson",
                           Drawers = 3,
                           Material = DesktopMaterial.Oak,
-                          RushDays = 5,
+                          RushDays = RushOrder.FiveDay,
                           Price = 3066.00M,
                           QuoteDate = DateTime.Parse("2008-12-2")
                       }

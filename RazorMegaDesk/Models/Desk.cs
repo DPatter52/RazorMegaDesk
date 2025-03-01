@@ -11,6 +11,17 @@ namespace RazorMegaDesk.Models
             Veneer, 
             Pine
         }
+    public enum RushOrder
+    {
+        [Display(Name = "Standard (14 day)")]
+        Standard,
+        [Display(Name = "3 Day")]
+        ThreeDay,
+        [Display(Name = "5 Day")]
+        FiveDay,
+        [Display(Name = "7 Day")]
+        SevenDay
+    }
     public class Desk
     {
 
@@ -42,8 +53,7 @@ namespace RazorMegaDesk.Models
         public DesktopMaterial Material { get; set; }
 
         [Required]
-        [Range(1, 14)]
-        public int RushDays { get; set; }
+        public RushOrder RushDays { get; set; }
 
         [Required]
         [StringLength(60, MinimumLength = 5)]

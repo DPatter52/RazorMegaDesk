@@ -145,9 +145,9 @@ namespace RazorMegaDesk.Pages.Desks
         public decimal GetRushCost(decimal surfaceArea)
         {
             int rushIndex;
-            if (Desk.RushDays == 3) rushIndex = 0;
-            else if (Desk.RushDays == 5) rushIndex = 1;
-            else if (Desk.RushDays == 7) rushIndex = 2;
+            if (Desk.RushDays == RushOrder.ThreeDay) rushIndex = 0;
+            else if (Desk.RushDays == RushOrder.FiveDay) rushIndex = 1;
+            else if (Desk.RushDays == RushOrder.SevenDay) rushIndex = 2;
             else return 0m;
 
             int sizeIndex;
