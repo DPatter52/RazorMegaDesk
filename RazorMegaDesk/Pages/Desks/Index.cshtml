@@ -82,15 +82,9 @@
         <tr>
             <td colspan="8">
                 <div class="deskmanager-item-btns">
-                    <button class="btn deskmanager-btn" onclick="window.location.href='@Url.Page("./Edit", new { id = item.Id })'">
-                        Edit
-                    </button>
-                    <button class="btn deskmanager-btn" onclick="window.location.href='@Url.Page("./Details", new { id = item.Id })'">
-                        Details
-                    </button>
-                    <button class="btn deskmanager-btn" onclick="window.location.href='@Url.Page("./Delete", new { id = item.Id })'">
-                        Delete
-                    </button>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn deskmanager-btn">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn deskmanager-btn">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn deskmanager-btn">Delete</a>
                 </div>
             </td>
         </tr>
@@ -99,5 +93,5 @@
 </table>
 </div>
 <div class="deskmanager-options">
-    <button class="btn btn-primary" onclick="location.href+='/Create'">Create New</button>
+    <a asp-page="./Create" class="btn btn-primary">Create New</a>
 </div>
