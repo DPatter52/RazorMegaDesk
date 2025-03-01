@@ -1,0 +1,9 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --primary-color: #c3c3c3;
+    --secondary-color: #777777;
+    --highlight-color: #336699;
+    --header-font: "Doppio One", sans-serif;
+    --body-font: "Lato", sans-serif;
+}

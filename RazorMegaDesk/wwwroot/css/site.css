@@ -19,4 +19,17 @@ html {
 
 body {
   margin-bottom: 60px;
+  background:var(--primary-color);
+  font-family:var(--body-font);
+}
+
+header, h1, h2, h3 {
+    font-family:var(--header-font);
+}
+
+header nav {
+    background-color: var(--highlight-color);
+}
+dive .navbar-brand {
+    color:white;
 }
