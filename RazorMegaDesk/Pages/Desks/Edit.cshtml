@@ -5,42 +5,52 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="text-center">Edit</h1>
 
-<h4>Desk</h4>
+<h4 class="text-center">Desk</h4>
 <hr />
 <div class="row justify-content-center">
     <div class="col-md-6">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Desk.Id" />
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.CustomerName" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.CustomerName" class="control-label"></label>
+                </div>
                 <input asp-for="Desk.CustomerName" class="form-control" />
                 <span asp-validation-for="Desk.CustomerName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.Width" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.Width" class="control-label"></label>
+                </div>
                 <input asp-for="Desk.Width" class="form-control" />
                 <span asp-validation-for="Desk.Width" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.Depth" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.Depth" class="control-label"></label>
+                </div>
                 <input asp-for="Desk.Depth" class="form-control" />
                 <span asp-validation-for="Desk.Depth" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.Drawers" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.Drawers" class="control-label"></label>
+                </div>
                 <input asp-for="Desk.Drawers" class="form-control" />
                 <span asp-validation-for="Desk.Drawers" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.Material" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.Material" class="control-label"></label>
+                </div>
                 <select asp-for="Desk.Material" class="form-control">
                     <option value="Laminate">Laminate</option>
                     <option value="Oak">Oak</option>
@@ -50,9 +60,11 @@
                 </select>
                 <span asp-validation-for="Desk.Material" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <span class="text-danger">*</span>
-                <label asp-for="Desk.RushDays" class="control-label"></label>
+            <div class="form-group deskmanager-form-field">
+                <div class="align-items-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Desk.RushDays" class="control-label"></label>
+                </div>
                 <select asp-for="Desk.RushDays" class="form-control">
                     <option value="Standard">Standard (14 Day)</option>
                     <option value="ThreeDay">3 Day</option>
@@ -61,13 +73,11 @@
                 </select>
                 <span asp-validation-for="Desk.RushDays" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group deskmanager-id-btns">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
             </div>
         </form>
-        <div class="form-group">
-            <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
-        </div>
     </div>
 </div>
 
