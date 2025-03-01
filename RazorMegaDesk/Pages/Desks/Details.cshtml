@@ -7,61 +7,63 @@
 
 <h1>Details</h1>
 
-<div>
-    <h4>Desk</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.Width)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.Width)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.Depth)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.Depth)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.Drawers)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.Drawers)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.Material)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.Material)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.RushDays)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.RushDays)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.CustomerName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.CustomerName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.QuoteDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.QuoteDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Desk.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Desk.Price)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Desk.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h4>Desk</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.Width)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.Width)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.Depth)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.Depth)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.Drawers)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.Drawers)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.Material)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.Material)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.RushDays)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.RushDays)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.CustomerName)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.CustomerName)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.QuoteDate)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.QuoteDate)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Desk.Price)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Desk.Price)
+            </dd>
+        </dl>
+        <div class="form-group">
+            <a asp-page="./Edit" asp-route-id="@Model.Desk.Id" class="btn btn-warning">Edit</a>
+            <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
 </div>
