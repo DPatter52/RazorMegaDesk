@@ -23,7 +23,7 @@ body {
   font-family:var(--body-font);
 }
 
-header {
+header, h1, h2, h3 {
     font-family:var(--header-font);
 }
 
