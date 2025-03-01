@@ -10,6 +10,20 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form class="filter-sort">
+    <p>
+        <label>Search Name: <input type="text" asp-for="SearchString" /></label>
+        <input type="submit" value="Search" />
+    </p>
+    <p>
+        <label>
+            Sort By:
+            <select asp-for="SortBy" asp-items="Model.Sorts" onchange="this.form.submit();">
+            </select>
+        </label>
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>

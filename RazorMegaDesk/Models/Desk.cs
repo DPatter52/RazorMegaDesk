@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 
 namespace RazorMegaDesk.Models
 {
@@ -26,21 +27,26 @@ namespace RazorMegaDesk.Models
         public int Id { get; set; }
 
         [Required]
+        [Range(24, 96)]
         public decimal Width { get; set; }
 
         [Required]
+        [Range(12, 48)]
         public decimal Depth { get; set; }
 
         [Required]
+        [Range(0, 7)]
         public int Drawers { get; set; }
 
         [Required]
         public DesktopMaterial Material { get; set; }
 
         [Required]
+        [Range(1, 14)]
         public int RushDays { get; set; }
 
         [Required]
+        [StringLength(60, MinimumLength = 5)]
         public string CustomerName { get; set; } = string.Empty;
 
 

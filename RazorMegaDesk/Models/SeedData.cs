@@ -24,23 +24,47 @@ namespace RazorMegaDesk.Models
                 context.Desk.AddRange(
                     new Desk
                     {
-                        Width = 10,
-                        Depth = 1,
+                        Width = 36,
+                        Depth = 14,
                         CustomerName = "Devin Patterson",
                         Drawers = 1,
                         Material = DesktopMaterial.Laminate,
-                        RushDays = 1,
-                        Price = 1.50M
+                        RushDays = 14,
+                        Price = 350.00M,
+                        QuoteDate = DateTime.Parse("2018-6-1")
                     },
                       new Desk
                       {
                           Width = 24,
-                          Depth = 6,
+                          Depth = 12,
                           CustomerName = "Teagan Patterson",
                           Drawers = 0,
                           Material = DesktopMaterial.Veneer,
-                          RushDays = 7,
-                          Price = 5.50M
+                          RushDays = 3,
+                          Price = 385.00M,
+                          QuoteDate = DateTime.Parse("2012-4-8")
+                      },
+                      new Desk
+                      {
+                          Width = 28,
+                          Depth = 24,
+                          CustomerName = "Jordan Peterson",
+                          Drawers = 7,
+                          Material = DesktopMaterial.Rosewood,
+                          RushDays = 14,
+                          Price = 850.00M,
+                          QuoteDate = DateTime.Parse("2012-10-30")
+                      },
+                      new Desk
+                      {
+                          Width = 72,
+                          Depth = 48,
+                          CustomerName = "Mike Tyson",
+                          Drawers = 3,
+                          Material = DesktopMaterial.Oak,
+                          RushDays = 5,
+                          Price = 3066.00M,
+                          QuoteDate = DateTime.Parse("2008-12-2")
                       }
                     );
                 context.SaveChanges();
